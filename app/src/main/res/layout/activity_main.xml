@@ -36,6 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/roll"
-        android:id="@+id/roll"/>
-    //@strings/roll para strings en el layout
+        android:id="@+id/roll"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        />
+
 </LinearLayout>

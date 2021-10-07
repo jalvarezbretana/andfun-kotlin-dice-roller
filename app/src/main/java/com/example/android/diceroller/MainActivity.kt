@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         diceImage = findViewById(R.id.dice_image)
     }
 
-    private fun rollDice() {
+    /*private fun rollDice() {
         val randomInt = Random().nextInt(7) + 1
         val drawableResource = when (randomInt) {
             1 -> R.drawable.ball1
@@ -48,6 +48,19 @@ class MainActivity : AppCompatActivity() {
             6 -> R.drawable.ball6
             else -> R.drawable.ball7
 
+        }
+        diceImage.setImageResource(drawableResource)
+    }*/
+    private fun rollDice() {
+        val randomInt = (1..7).shuffled().last()
+        val drawableResource = when (randomInt) {
+            1 -> R.drawable.ball1
+            2 -> R.drawable.ball2
+            3 -> R.drawable.ball3
+            4 -> R.drawable.ball4
+            5 -> R.drawable.ball5
+            6 -> R.drawable.ball6
+            else -> R.drawable.ball7
         }
         diceImage.setImageResource(drawableResource)
     }
